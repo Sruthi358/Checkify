@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Feedback Form</title>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .site-header {
+            position: fixed;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            transition: 0.5s;
+            border-bottom: 1px solid transparent;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* body {
+    padding-top: 10px;
+}
+.site-header {
+    background: white; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  
+} */
+
+
+        .containerr {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        h1 {
+            color: orange;
+            font-size: 28px;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.3);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .container:hover {
+            box-shadow: 0px 8px 20px rgba(255, 140, 0, 0.6);
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #ff8c00;
+            text-shadow: 0 0 5px gray;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 2px solid #ff8c00;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #ff6500;
+            box-shadow: 0px 0px 8px rgba(255, 69, 0, 0.8);
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: #ffa83d;
+            color: black;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.8);
+            transition: 0.3s;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff6500;
+            box-shadow: 0px 6px 14px rgba(255, 69, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header space-between" style="padding-bottom: 100px;">
+        <div class="containerr">
+            <div class="row" style="margin-left: 20px;">
+                <img src="logo.png" width="120" height="60" alt="Logo">
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div class="main-navigation">
+                <button class="menu-toggle"><span></span><span></span></button>
+                <nav class="header-menu">
+                    <ul class="menu food-nav-menu">
+                        <li><a href="./index.html"><b>Home</b></a></li>
+                        <li><a href="#gallery"><b>Gallery</b></a></li>
+                        <li><a href="./register.php"><b>Register</b></a></li>
+                        <li><a href="./about.html"><b>Events</b></a></li>
+                        <li><a href="./faq.html"><b>FAQ</b></a></li>
+                        <li><a href="./feedback.html"><b>Feedback</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br><br><br><br><br>
+    <div class="container">
+        <h2>Event Registration Feedback Form</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="registrationExperience">How was your registration experience?</label>
+            <select id="registrationExperience" name="registrationExperience">
+                <option value="#" selected disabled>Select</option>
+                <option value="5">Very Easy</option>
+                <option value="4">Easy</option>
+                <option value="3">Neutral</option>
+                <option value="2">Difficult</option>
+                <option value="1">Very Difficult</option>
+            </select>
+
+            <label for="improvements">Any suggestions for improvement?</label>
+            <textarea id="improvements" name="improvements" rows="3"></textarea>
+
+            <label for="overallSatisfaction">Overall, how satisfied are you with the registration process?</label>
+            <select id="overallSatisfaction" name="overallSatisfaction">
+                <option value="5" selected disabled>Select</option>
+                <option value="5">Very Satisfied</option>
+                <option value="4">Satisfied</option>
+                <option value="3">Neutral</option>
+                <option value="2">Dissatisfied</option>
+                <option value="1">Very Dissatisfied</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+
+</html>

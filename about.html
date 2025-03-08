@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechFest</title>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .site-header {
+            position: fixed;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            transition: 0.5s;
+            border-bottom: 1px solid transparent;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: orange;
+            font-size: 28px;
+        }
+    </style>
+    <style>
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        #searchBar {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+            outline: none;
+        }
+
+        .event-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .event {
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+            background-color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.5);
+        }
+
+        .event img {
+            width: 100%;
+            border-radius: 8px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .event h2 {
+            color: orange;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .event p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .know-more {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            background-color: orange;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .know-more:hover {
+            background-color: darkorange;
+        }
+
+        .dimmed {
+            opacity: 0.3;
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header space-between">
+        <div class="container">
+            <div class="row" style="margin-left: 20px;">
+                <img src="logo.png" width="120" height="60" alt="Logo">
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div class="main-navigation">
+                <button class="menu-toggle"><span></span><span></span></button>
+                <nav class="header-menu">
+                    <ul class="menu food-nav-menu">
+                        <li><a href="./index.html"><b>Home</b></a></li>
+                        <li><a href="#gallery"><b>Gallery</b></a></li>
+                        <li><a href="./register.php"><b>Register</b></a></li>
+                        <!-- <li><a href="./about.html"><b>Events</b></a></li> -->
+                        <li><a href="./faq.html"><b>FAQ</b></a></li>
+                        <li><a href="./feedback.html"><b>Feedback</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container" style=" padding-top: 90px;">
+        <h1>About Our Events</h1>
+        <p>Welcome to TechFest, where innovation meets creativity! Explore our thrilling events:</p>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for events..." onkeyup="filterEvents()">
+        </div>
+
+        <div class="event-section">
+            <div class="event" data-name="coding contest programming c java python">
+                <img src="assets/images/coding.jpg" alt="Coding Contest">
+                <h2>Coding Contest</h2>
+                <p>Showcase your programming skills in an intense coding battle.</p>
+                <a href="events/coding-contest.html" class="know-more">Know More</a>
+            </div>
+
+            <div class="event" data-name="hackathon 2-day innovation problem-solving">
+                <img src="assets/images/hackathon.jpg" alt="Hackathon">
+                <h2>Hackathon</h2>
+                <p>Unleash your creativity and build innovative solutions in a thrilling 2-day hackathon.</p>
+                <a href="events/hackathon.html" class="know-more">Know More</a>
+            </div>
+
+            <div class="event" data-name="robotics competition automation engineering">
+                <img src="assets/images/robo.jpg" alt="Robotics Competition">
+                <h2>Robotics Competition</h2>
+                <p>Build, code, and compete! Showcase your robotic engineering skills.</p>
+                <a href="events/robotics.html" class="know-more">Know More</a>
+            </div>
+
+            <div class="event" data-name="music battle performance competition">
+                <img src="assets/images/music.jpg" alt="Music Battle">
+                <h2>Music Battle</h2>
+                <p>Unleash your musical talents in an electrifying battle of tunes and rhythms.</p>
+                <a href="events/music-battle.html" class="know-more">Know More</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterEvents() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let events = document.getElementsByClassName("event");
+
+            for (let i = 0; i < events.length; i++) {
+                let eventKeywords = events[i].getAttribute("data-name").toLowerCase();
+                if (eventKeywords.includes(input)) {
+                    events[i].classList.remove("dimmed");
+                } else {
+                    events[i].classList.add("dimmed");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

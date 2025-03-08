@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start":"vite",
+    "build": "vite build" 
+  },
+  "dependencies": {
+    "vite": "^6.2.1"
+  }
+}

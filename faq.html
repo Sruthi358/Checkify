@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f3f4f6;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            width: 90%;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .faq-toggle {
+            width: 100%;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            color: #555;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<!-- <body style="background-image: url('assets/images/bg3.jpeg'); background-size: cover; background-position: center;"> -->
+    <body class="flex items-center justify-center min-h-screen py-10"
+    style="background-image: url('assets/images/bg3.jpeg'); background-size: cover; background-position: center;">
+<!-- <body> -->
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <button class="faq-toggle">What is the event about? <span class="plus-icon">+</span></button>
+            <p class="faq-answer">This event brings together students to participate in various competitions, including coding, hackathons, and music battles.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-toggle">Who can participate? <span class="plus-icon">+</span></button>
+            <p class="faq-answer">Students from any college and any branch can participate in the event.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-toggle">Is there any registration fee? <span class="plus-icon">+</span></button>
+            <p class="faq-answer">No, participation is completely free for all registered students.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-toggle">How do I register? <span class="plus-icon">+</span></button>
+            <p class="faq-answer">You can register by filling out the form on our website. Once registered, you will receive a confirmation email.</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-toggle">Will I get a participation certificate? <span class="plus-icon">+</span></button>
+            <p class="faq-answer">Yes, all participants will receive an e-certificate upon successful participation.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".faq-toggle").forEach(button => {
+            button.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+                
+                const icon = this.querySelector(".plus-icon");
+                icon.textContent = icon.textContent === "+" ? "-" : "+";
+            });
+        });
+    </script>
+</body>
+</html>
