@@ -1,4 +1,4 @@
-# **Hospital Management System**
+# **Checkify**
 Checkify is a web-based platform designed to streamline event management by providing an intuitive interface for event organizers and participants. It enables users to create, manage, and register for events while keeping track of important deadlines with a live countdown feature.
 
 ## **Prerequisites**
